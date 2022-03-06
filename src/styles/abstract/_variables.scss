@@ -1,0 +1,26 @@
+$app-font: 'Poppins', sans-serif;
+$app-base-font-size: 16;
+
+$breakpoints: (
+  'small': (
+    min-width: 320px,
+  ),
+  'medium': (
+    min-width: 768px,
+  ),
+  'large': (
+    min-width: 1024px,
+  ),
+  'huge': (
+    min-width: 1440px,
+  ),
+  'wide': (
+    min-width: 2500px,
+  ),
+);
+
+$primary-blue: #4581f6;
+$maastricht-blue: #07253c;
+$navy-blue: #002265;
+$indigo-blue: #14279b;
+$jet-black: #212121;
