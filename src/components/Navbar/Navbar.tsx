@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 export default function Navbar() {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
@@ -6,6 +6,13 @@ export default function Navbar() {
   const onMenuIconClick = () => {
     setIsMenuVisible(!isMenuVisible);
   };
+  useEffect(() => {
+    if (isMenuVisible) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'visible';
+    }
+  }, [isMenuVisible]);
 
   return (
     <nav className="navbar">
@@ -24,18 +31,33 @@ export default function Navbar() {
           <div className="content" />
         </button>
       </div>
-      <div
+
+      <ul
         className={`navbar__items ${
           isMenuVisible ? `navbar__items--visible` : ``
         }`}
       >
-        <ul>
-          <li className="navbar__link">About</li>
-          <li className="navbar__link">Passions</li>
-          <li className="navbar__link">Portfolio</li>
-          <li className="navbar__link">Portfolio</li>
-        </ul>
-      </div>
+        <li className="navbar__list-item">
+          <a href="#about" className="navbar__link">
+            About
+          </a>
+        </li>
+        <li className="navbar__list-item">
+          <a href="#passions" className="navbar__link">
+            Passions
+          </a>
+        </li>
+        <li className="navbar__list-item">
+          <a href="#portfolio" className="navbar__link">
+            Portfolio
+          </a>
+        </li>
+        <li className="navbar__list-item">
+          <a href="#contact" className="navbar__link navbar__btn">
+            Contact Me
+          </a>
+        </li>
+      </ul>
     </nav>
   );
 }

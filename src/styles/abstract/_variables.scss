@@ -1,5 +1,6 @@
 $app-font: 'Poppins', sans-serif;
 $app-base-font-size: 16;
+$app-navbar-size: 60px;
 
 $breakpoints: (
   'small': (
@@ -19,8 +20,12 @@ $breakpoints: (
   ),
 );
 
+$transition-normal: all 0.6s ease-in-out;
+
 $primary-blue: #4581f6;
 $maastricht-blue: #07253c;
 $navy-blue: #002265;
 $indigo-blue: #14279b;
 $jet-black: #212121;
+$white: #ffffff;
+$cornflower-blue: #608af5;
