@@ -1,0 +1,140 @@
+.navbar {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  padding: pxToRem(7) pxToRem(12);
+  z-index: 5;
+  height: $app-navbar-size;
+
+  @include respond(large) {
+    flex-direction: row;
+    padding: pxToRem(24) pxToRem(100);
+  }
+
+  @include respond(huge) {
+    padding: pxToRem(35) pxToRem(133);
+  }
+
+  @include respond(wide) {
+    padding: pxToRem(38) pxToRem(140);
+  }
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    z-index: 5;
+  }
+
+  &__menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: pxToRem(2);
+    border: none;
+    background: none;
+    cursor: pointer;
+    $this: &;
+
+    @include respond(large) {
+      display: none;
+    }
+
+    &::after,
+    .content,
+    &::before {
+      content: '';
+      display: block;
+      border-radius: pxToRem(8);
+      width: pxToRem(15);
+      height: pxToRem(4);
+      background: $jet-black;
+      transition: all 0.3s;
+    }
+    &::after {
+      width: pxToRem(26);
+    }
+    &::before {
+      width: pxToRem(22);
+    }
+
+    &--active {
+      &::after {
+        width: pxToRem(22);
+        transform: translateY(pxToRem(-7)) rotateZ(-135deg);
+      }
+      &::before {
+        transform: translateY(pxToRem(10)) rotateZ(135deg);
+      }
+      .content {
+        transform: scale(0);
+      }
+    }
+  }
+
+  &__logo {
+    filter: $default-drop-shadow;
+    font-size: pxToRem(25);
+    color: $indigo-blue;
+    letter-spacing: pxToRem(2);
+    &--bold {
+      font-weight: 700;
+      color: $navy-blue;
+    }
+  }
+
+  &__items {
+    display: block;
+    position: absolute;
+    top: $app-navbar-size;
+    left: -100%;
+    background-color: $white;
+    z-index: 3;
+    transition: $transition-normal;
+    height: calc(100vh - $app-navbar-size);
+    width: 100%;
+    list-style: none;
+    padding: 0;
+
+    @include respond(large) {
+      display: flex;
+      justify-content: flex-end;
+      position: static;
+      height: auto;
+    }
+
+    &--visible {
+      left: 0%;
+    }
+  }
+
+  &__list-item {
+    padding: pxToRem(12) pxToRem(8);
+    margin-bottom: pxToRem(12);
+  }
+
+  &__link {
+    font-size: pxToRem(18);
+    text-decoration: none;
+    letter-spacing: pxToRem(1);
+    color: $jet-black;
+
+    &:hover {
+      color: $indigo-blue;
+    }
+  }
+
+  &__btn {
+    background-color: $cornflower-blue;
+    padding: pxToRem(8) pxToRem(22);
+    border: pxToRem(2) solid $cornflower-blue;
+    color: $white;
+    border-radius: pxToRem(10);
+    transition: $transition-normal;
+
+    &:hover {
+      color: $cornflower-blue;
+      background-color: $white;
+    }
+  }
+}
