@@ -8,6 +8,15 @@
 
   @include respond(large) {
     flex-direction: row;
+    padding: pxToRem(24) pxToRem(100);
+  }
+
+  @include respond(huge) {
+    padding: pxToRem(35) pxToRem(133);
+  }
+
+  @include respond(wide) {
+    padding: pxToRem(38) pxToRem(140);
   }
 
   &__head {
