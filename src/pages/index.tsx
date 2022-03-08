@@ -14,7 +14,7 @@ export default function Home() {
           </h1>
           <p className="hero__description">
             Front End Developer based in India. I am coding with a clean and
-            beautiful problem solving mind
+            beautiful problem-solving mind
           </p>
         </div>
       </section>

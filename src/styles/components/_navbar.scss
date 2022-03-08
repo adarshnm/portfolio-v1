@@ -2,21 +2,30 @@
   display: flex;
   flex-direction: column;
   background-color: $white;
-  padding: pxToRem(7) pxToRem(12);
+  padding: pxToRem(7) pxToRem(14);
   z-index: 5;
-  height: $app-navbar-size;
+  min-height: $app-navbar-size;
+  margin: 0 auto;
+
+  @include respond(small) {
+    max-width: $max-width-small;
+  }
+
+  @include respond(medium) {
+    flex-direction: row;
+    align-items: center;
+    max-width: $max-width-medium;
+    padding: pxToRem(24) 0;
+  }
 
   @include respond(large) {
-    flex-direction: row;
-    padding: pxToRem(24) pxToRem(100);
+    padding-top: pxToRem(32);
+    max-width: $max-width-large;
   }
 
   @include respond(huge) {
-    padding: pxToRem(35) pxToRem(133);
-  }
-
-  @include respond(wide) {
-    padding: pxToRem(38) pxToRem(140);
+    max-width: $max-width-huge;
+    padding: pxToRem(36) 0;
   }
 
   &__head {
@@ -36,7 +45,7 @@
     cursor: pointer;
     $this: &;
 
-    @include respond(large) {
+    @include respond(medium) {
       display: none;
     }
 
@@ -77,6 +86,7 @@
     font-size: pxToRem(25);
     color: $indigo-blue;
     letter-spacing: pxToRem(2);
+
     &--bold {
       font-weight: 700;
       color: $navy-blue;
@@ -96,7 +106,7 @@
     list-style: none;
     padding: 0;
 
-    @include respond(large) {
+    @include respond(medium) {
       display: flex;
       justify-content: flex-end;
       position: static;
@@ -111,13 +121,31 @@
   &__list-item {
     padding: pxToRem(12) pxToRem(8);
     margin-bottom: pxToRem(12);
+
+    @include respond(medium) {
+      padding: 0 pxToRem(8);
+      margin-bottom: 0;
+    }
+    
+    @include respond(large) {
+      padding: 0 pxToRem(12);
+      margin-bottom: 0;
+    }
   }
 
   &__link {
-    font-size: pxToRem(18);
+    font-size: pxToRem(14);
     text-decoration: none;
     letter-spacing: pxToRem(1);
     color: $jet-black;
+
+    @include respond(large) {
+      font-size: pxToRem(16);
+    }
+
+    @include respond(huge) {
+      font-size: pxToRem(18);
+    }
 
     &:hover {
       color: $indigo-blue;
