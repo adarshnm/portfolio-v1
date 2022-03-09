@@ -3,10 +3,12 @@ import Navbar from '@components/Navbar';
 import Title from '@components/Title';
 import PASSIONS from '@/constants/passions.constants';
 import PassionsCard from '@/components/PassionsCard';
+import SEO from '@/components/SEO';
 
 export default function Home() {
   return (
     <main>
+      <SEO />
       <Navbar />
       <section className="hero container" id="hero">
         <img className="hero__image" src="./heroImg.svg" alt="" />
@@ -25,7 +27,7 @@ export default function Home() {
         <Title lightHeading="Additional" darkHeading="Passions" />
         <div className="passions__container">
           {PASSIONS.map((passion) => (
-            <PassionsCard passion={passion} />
+            <PassionsCard key={passion.prominentTitle} passion={passion} />
           ))}
         </div>
       </section>
