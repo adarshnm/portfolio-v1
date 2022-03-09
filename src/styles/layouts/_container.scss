@@ -1,0 +1,21 @@
+.container {
+  margin: pxToRem(35) auto;
+  padding: pxToRem(7) pxToRem(14);
+
+  @include respond(small) {
+    max-width: $max-width-small;
+  }
+
+  @include respond(medium) {
+    max-width: $max-width-medium;
+    padding: 0;
+  }
+
+  @include respond(large) {
+    max-width: $max-width-large;
+  }
+
+  @include respond(huge) {
+    max-width: $max-width-huge;
+  }
+}

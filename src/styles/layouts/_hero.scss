@@ -1,31 +1,36 @@
 .hero {
   display: flex;
   flex-direction: column;
-  margin: pxToRem(35) pxToRem(12);
 
   @include respond(medium) {
     flex-direction: row-reverse;
     align-items: center;
-    margin: pxToRem(35) pxToRem(64);
-  }
-
-  @include respond(large) {
-    margin: pxToRem(38) pxToRem(96);
   }
 
   &__image {
     align-self: center;
 
-    @include respond(medium) {
+    @include respond(small) {
       margin-left: pxToRem(32);
-      width: pxToRem(300);
-      height: pxToRem(300);
+      width: pxToRem(280);
+      height: pxToRem(280);
+    }
+
+    @include respond(medium) {
+      margin-left: pxToRem(52);
+      width: pxToRem(320);
+      height: pxToRem(320);
     }
 
     @include respond(large) {
-      width: pxToRem(500);
-      height: pxToRem(500);
-      margin-left: pxToRem(100);
+      width: pxToRem(400);
+      height: pxToRem(400);
+    }
+
+    @include respond(huge) {
+      width: pxToRem(600);
+      height: pxToRem(600);
+      margin-left: pxToRem(120);
     }
   }
 
@@ -39,7 +44,11 @@
     }
 
     @include respond(large) {
-      font-size: pxToRem(35);
+      font-size: pxToRem(32);
+    }
+
+    @include respond(large) {
+      font-size: pxToRem(38);
     }
   }
 
@@ -56,7 +65,12 @@
     }
 
     @include respond(large) {
-      font-size: pxToRem(50);
+      font-size: pxToRem(44);
+      line-height: pxToRem(60);
+    }
+
+    @include respond(huge) {
+      font-size: pxToRem(58);
       line-height: pxToRem(65);
     }
   }
@@ -74,8 +88,13 @@
     }
 
     @include respond(large) {
-      font-size: pxToRem(23);
+      font-size: pxToRem(21);
       line-height: pxToRem(26);
+    }
+
+    @include respond(large) {
+      font-size: pxToRem(24);
+      line-height: pxToRem(28);
     }
   }
 }

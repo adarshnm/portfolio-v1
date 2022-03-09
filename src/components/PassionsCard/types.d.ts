@@ -1,0 +1,3 @@
+interface IPassionsCardProps {
+  passion: IPassion;
+}

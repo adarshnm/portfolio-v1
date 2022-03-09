@@ -1,0 +1,24 @@
+.passions {
+  margin-top: pxToRem(60);
+
+  @include respond(medium) {
+    margin-top: pxToRem(90);
+  }
+  &__container {
+    padding-top: pxToRem(35);
+
+    @include respond(medium) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    @include respond(large) {
+      flex-wrap: nowrap;
+      padding-top: pxToRem(75);
+      margin-bottom: 0;
+    }
+    @include respond(huge) {
+      justify-content: space-evenly;
+    }
+  }
+}
