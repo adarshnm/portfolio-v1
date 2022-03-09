@@ -97,7 +97,7 @@
     display: block;
     position: absolute;
     top: $app-navbar-size;
-    left: -100%;
+    left: 100%;
     background-color: $white;
     z-index: 3;
     transition: $transition-normal;
@@ -119,14 +119,16 @@
   }
 
   &__list-item {
-    padding: pxToRem(12) pxToRem(8);
-    margin-bottom: pxToRem(12);
+    padding: pxToRem(12);
+    margin-bottom: pxToRem(18);
+    text-align: end;
 
     @include respond(medium) {
+      text-align: center;
       padding: 0 pxToRem(8);
       margin-bottom: 0;
     }
-    
+
     @include respond(large) {
       padding: 0 pxToRem(12);
       margin-bottom: 0;
@@ -134,10 +136,14 @@
   }
 
   &__link {
-    font-size: pxToRem(14);
+    font-size: pxToRem(18);
     text-decoration: none;
     letter-spacing: pxToRem(1);
     color: $jet-black;
+
+    @include respond(medium) {
+      font-size: pxToRem(14);
+    }
 
     @include respond(large) {
       font-size: pxToRem(16);

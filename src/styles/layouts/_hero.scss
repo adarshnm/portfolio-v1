@@ -1,25 +1,10 @@
 .hero {
   display: flex;
   flex-direction: column;
-  margin: pxToRem(35) auto;
-  padding: pxToRem(7) pxToRem(14);
-  @include respond(small) {
-    max-width: $max-width-small;
-  }
 
   @include respond(medium) {
-    max-width: $max-width-medium;
     flex-direction: row-reverse;
     align-items: center;
-    padding: 0;
-  }
-
-  @include respond(large) {
-    max-width: $max-width-large;
-  }
-
-  @include respond(huge) {
-    max-width: $max-width-huge;
   }
 
   &__image {
@@ -41,7 +26,7 @@
       width: pxToRem(400);
       height: pxToRem(400);
     }
-    
+
     @include respond(huge) {
       width: pxToRem(600);
       height: pxToRem(600);

@@ -1,0 +1,21 @@
+.title {
+  text-align: center;
+
+  &__text {
+    font-size: pxToRem(25);
+
+    @include respond(large) {
+      font-size: pxToRem(35);
+    }
+
+    &--light {
+      color: $indigo-blue;
+      font-weight: 400;
+    }
+
+    &--dark {
+      color: $patrick-blue;
+      font-weight: 600;
+    }
+  }
+}
