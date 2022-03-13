@@ -31,7 +31,7 @@
   &__head {
     display: flex;
     justify-content: space-between;
-    z-index: 5;
+    z-index: 2;
   }
 
   &__menu-icon {
@@ -43,7 +43,6 @@
     border: none;
     background: none;
     cursor: pointer;
-    $this: &;
 
     @include respond(medium) {
       display: none;
@@ -94,8 +93,7 @@
   }
 
   &__items {
-    display: block;
-    position: absolute;
+    position: fixed;
     top: $app-navbar-size;
     left: 100%;
     background-color: $white;
@@ -114,6 +112,7 @@
     }
 
     &--visible {
+      display: block;
       left: 0%;
     }
   }

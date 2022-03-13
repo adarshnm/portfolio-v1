@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-ts",
-  "description": "A TypeScript starter for Gatsby that includes all you need to build amazing projects",
+  "name": "portfolio-v1",
+  "description": "A Personal Portfolio website",
   "version": "1.0.0",
   "private": true,
-  "author": "João Pedro Schmitz <hey@joaopedro.dev> (https://joaopedro.dev)",
+  "author": "Adarsh Mohan <dev.adarshmohan@gmail.com>",
   "license": "MIT",
   "keywords": [
     "gatsby",
@@ -31,6 +31,7 @@
   "dependencies": {
     "gatsby": "4.8.1",
     "gatsby-plugin-react-helmet": "5.9.0",
+    "gatsby-plugin-react-svg": "3.1.0",
     "gatsby-plugin-sass": "5.9.0",
     "normalize.css": "8.0.1",
     "react": "17.0.2",

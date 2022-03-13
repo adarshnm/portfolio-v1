@@ -1,4 +1,4 @@
-.passion-card {
+.project-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,9 +12,6 @@
 
   @include respond(medium) {
     margin-right: pxToRem(30);
-    &:nth-child(n + 2) {
-      margin-right: 0;
-    }
   }
 
   @include respond(large) {
@@ -28,24 +25,11 @@
     padding: 0 pxToRem(16);
   }
 
-  &__text {
-    font-size: pxToRem(25);
-    color: $black;
-    letter-spacing: pxToRem(1.5);
-    line-height: pxToRem(37.5);
-
-    &--light {
-      font-weight: 400;
-    }
-
-    &--dark {
-      font-weight: 600;
-    }
-  }
-
-  &__summary {
-    font-size: pxToRem(18);
-    line-height: pxToRem(32);
-    letter-spacing: pxToRem(1.5);
+  &__bg {
+    width: 100%;
+    height: 100%;
+    background-color: #4dc2f1;
+    opacity: 0.25;
+    clip-path: circle(30% at 40% 40%);
   }
 }

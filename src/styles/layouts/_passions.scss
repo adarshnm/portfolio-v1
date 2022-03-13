@@ -6,14 +6,16 @@
   }
   &__container {
     padding-top: pxToRem(35);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
     @include respond(medium) {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      flex-direction: row;
     }
     @include respond(large) {
-      flex-wrap: nowrap;
+      // flex-wrap: nowrap;
+      justify-content: space-evenly;
       padding-top: pxToRem(75);
       margin-bottom: 0;
     }

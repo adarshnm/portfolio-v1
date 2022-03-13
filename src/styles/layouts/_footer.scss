@@ -1,0 +1,41 @@
+.footer {
+  position: relative;
+  width: 100vw;
+  height: pxToRem(300);
+  background-color: $primary-blue;
+
+  &__bg {
+    position: absolute;
+    top: -1%;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    svg {
+      position: relative;
+      display: block;
+      width: calc(100% + 1.3px);
+      height: $footer-wave-height;
+      transform: rotateY(180deg);
+    }
+
+    .shape-fill {
+      fill: $white;
+    }
+  }
+
+  &__content {
+    padding-top: $footer-wave-height;
+    padding-bottom: pxToRem(12);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &__copyright {
+    color: $white;
+  }
+}

@@ -1,11 +1,30 @@
 import React, { useEffect, useState } from 'react';
+import COMMON from '@/constants/common.constants';
+import NAVLINKS from '@/constants/links.constants';
 
 export default function Navbar() {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
 
+  const [size, setSize] = useState<ISize>({ width: 0, height: 0 });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setSize({ width: window.innerWidth, height: window.innerHeight });
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const onMenuIconClick = () => {
     setIsMenuVisible(!isMenuVisible);
   };
+
+  useEffect(() => {
+    if (size.width > COMMON.MENUBAR_VISIBLE_MAX_SIZE && isMenuVisible) {
+      setIsMenuVisible(false);
+    }
+  }, [isMenuVisible, size.width]);
+
   useEffect(() => {
     if (isMenuVisible) {
       document.body.style.overflow = 'hidden';
@@ -13,6 +32,10 @@ export default function Navbar() {
       document.body.style.overflow = 'visible';
     }
   }, [isMenuVisible]);
+
+  const onLinkClick = () => {
+    setIsMenuVisible(false);
+  };
 
   return (
     <nav className="navbar">
@@ -37,26 +60,17 @@ export default function Navbar() {
           isMenuVisible ? `navbar__items--visible` : ``
         }`}
       >
-        <li className="navbar__list-item">
-          <a href="#about" className="navbar__link">
-            About
-          </a>
-        </li>
-        <li className="navbar__list-item">
-          <a href="#passions" className="navbar__link">
-            Passions
-          </a>
-        </li>
-        <li className="navbar__list-item">
-          <a href="#portfolio" className="navbar__link">
-            Portfolio
-          </a>
-        </li>
-        <li className="navbar__list-item">
-          <a href="#contact" className="navbar__link navbar__btn">
-            Contact Me
-          </a>
-        </li>
+        {NAVLINKS.map(({ text, id, isButton }) => (
+          <li key={id} className="navbar__list-item">
+            <a
+              href={`#${id}`}
+              className={`navbar__link ${isButton && 'navbar__btn'}`}
+              onClick={onLinkClick}
+            >
+              {text}
+            </a>
+          </li>
+        ))}
       </ul>
     </nav>
   );
