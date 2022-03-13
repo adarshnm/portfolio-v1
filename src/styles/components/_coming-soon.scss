@@ -1,0 +1,16 @@
+.coming-soon {
+  margin: pxToRem(35) 0;
+
+  @include respond(medium) {
+    margin: pxToRem(85) 0;
+  }
+
+  @include respond(large) {
+    margin: pxToRem(120) 0;
+  }
+
+  &__text {
+    text-align: center;
+    color: $primary-blue;
+  }
+}
