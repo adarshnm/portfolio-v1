@@ -18,6 +18,8 @@
       "@/*": ["./src/*"],
       "@/static/*": ["./static/*"],
       "@components/*": ["./src/components/*"],
+      "@constants/*": ["./src/constants/*"],
+      "@styles/*": ["./src/styles/*"],
     }
   },
   "exclude": ["node_modules"],

@@ -1,0 +1,3 @@
+interface IProjectCardProps {
+  project: IProject;
+}
