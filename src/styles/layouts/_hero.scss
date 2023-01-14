@@ -8,7 +8,8 @@
   }
 
   &__image {
-    align-self: center;
+    display: flex;
+    align-items: center;
 
     @include respond(small) {
       margin-left: pxToRem(32);
@@ -54,7 +55,7 @@
 
   &__intro {
     color: $patrick-blue;
-    font-size: pxToRem(32);
+    font-size: pxToRem(30);
     letter-spacing: pxToRem(0);
     line-height: pxToRem(45);
     font-style: normal;

@@ -11,19 +11,16 @@
   margin-bottom: pxToRem(30);
 
   @include respond(medium) {
-    margin-right: pxToRem(30);
     &:nth-child(n + 2) {
       margin-right: 0;
     }
   }
 
   @include respond(large) {
-    margin-right: pxToRem(12);
     padding: 0 pxToRem(16);
   }
 
   @include respond(huge) {
-    margin-right: pxToRem(24);
     max-width: pxToRem(450);
     padding: 0 pxToRem(16);
   }

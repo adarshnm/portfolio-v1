@@ -7,6 +7,8 @@ import SEO from '@/components/SEO';
 import ProjectCard from '@/components/ProjectCard';
 import CONTACTS from '@/constants/contact.constants';
 import ContactCard from '@/components/ContactCard';
+import HeroLogo from '@/components/HeroLogo';
+import PROJECTS from '@/constants/projects.constants';
 
 export default function Home() {
   return (
@@ -14,14 +16,17 @@ export default function Home() {
       <SEO />
       <Navbar />
       <section className="hero container" id="hero">
-        <img className="hero__image" src="./heroImg.svg" alt="" />
+        <div className="hero__image">
+          <HeroLogo />
+        </div>
         <div className="hero__texts">
           <h3 className="hero__pre-intro">Hi !</h3>
           <h1 className="hero__intro">
-            I&apos;m Adarsh Mohan. a Front End Developer
+            I&apos;m Adarsh Mohan.
+            <br />a Front End Developer
           </h1>
           <p className="hero__description">
-            Front End Developer based in India. I am coding with a clean and
+            Front-End Developer based in India. I am coding with a clean and
             beautiful problem-solving mind
           </p>
         </div>
@@ -34,19 +39,19 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section className="container portfolio" id="portfolio">
+      <section className="container projects" id="portfolio">
         <Title lightHeading="My" darkHeading="Portfolio" />
-        <div className="portfolio__container">
-          <div className="coming-soon">
-            <h3 className="coming-soon__text">Coming Soon...</h3>
-          </div>
+        <div className="projects__container">
+          {PROJECTS.map((project) => (
+            <ProjectCard key={project.title} project={project} />
+          ))}
         </div>
       </section>
       <section className="container contact" id="contact">
         <Title lightHeading="Contact" darkHeading="Me" />
         <div className="passions__container">
           {CONTACTS.map((contact) => (
-            <ContactCard contact={contact} />
+            <ContactCard contact={contact} key={contact.title} />
           ))}
         </div>
       </section>
@@ -65,7 +70,7 @@ export default function Home() {
           </svg>
         </div>
         <div className="footer__content">
-          <p className="footer__copyright">Adarsh Mohan &copy;2022</p>
+          <p className="footer__copyright">Adarsh Mohan &copy;2023</p>
         </div>
       </footer>
     </main>

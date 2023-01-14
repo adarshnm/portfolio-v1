@@ -15,7 +15,7 @@ const PASSIONS: IPassion[] = [
     imageLink: './uiUxDesign.svg',
     prominentTitle: 'Mobile-App',
     trivialTitle: 'Developer',
-    techSummary: '(Android, Flutter)',
+    techSummary: '(Native Android, Flutter)',
   },
 ];
 

@@ -1,4 +1,4 @@
-.passions {
+.projects {
   margin-top: pxToRem(60);
 
   @include respond(medium) {
@@ -10,7 +10,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: pxToRem(20);
-
+    position: relative;
     @include respond(medium) {
       flex-direction: row;
       gap: pxToRem(30);
@@ -18,6 +18,7 @@
     @include respond(large) {
       // flex-wrap: nowrap;
       padding-top: pxToRem(75);
+
       margin-bottom: 0;
     }
     @include respond(huge) {

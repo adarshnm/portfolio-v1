@@ -7,7 +7,7 @@ const CONTACTS: IContact[] = [
   {
     title: 'Instagram',
     icon: './insta.svg',
-    link: 'https://github.com/adarshnm/:',
+    link: 'https://www.instagram.com/am.fe.dev/',
   },
   {
     title: 'Email',
