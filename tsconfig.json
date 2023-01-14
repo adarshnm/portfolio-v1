@@ -19,7 +19,7 @@
       "@/static/*": ["./static/*"],
       "@components/*": ["./src/components/*"],
       "@constants/*": ["./src/constants/*"],
-      "@styles/*": ["./src/styles/*"],
+      "@styles/*": ["./src/styles/*"]
     }
   },
   "exclude": ["node_modules"],

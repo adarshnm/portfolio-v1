@@ -41,6 +41,8 @@ If you prefer you can clone this repository and run the following commands insid
 
 > By default, this starter uses Yarn, but this choice is yours. If you'd like to switch to npm, delete the `yarn.lock` file, install the dependencies with `npm install`, and change the CI workflows, Husky Git hooks, and lint-staged steps to use npm commands.
 
+### Use LTS v16
+
 1. `yarn`;
 2. `yarn start`;
 
