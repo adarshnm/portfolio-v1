@@ -1,4 +1,5 @@
 import React from 'react';
+import CardBlob from '../CardBlob';
 
 export default function ContactCard({
   contact: { title, link, icon },
@@ -11,11 +12,7 @@ export default function ContactCard({
       className="contact-card"
     >
       <div className="contact-card__image-container">
-        <img
-          src="./irregular.svg"
-          alt="Icon bg"
-          className="contact-card__bg-image"
-        />
+        <CardBlob />
         <div className="contact-card__icon-container">
           <img src={icon} alt="Contact icon" className="contact-card__icon" />
         </div>
