@@ -19,7 +19,7 @@
     "lint": "eslint --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\"",
     "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
     "postinstall": "husky install",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "commit": "cz"
   },
   "lint-staged": {
@@ -29,6 +29,7 @@
     ]
   },
   "dependencies": {
+    "@react-spring/web": "9.6.1",
     "gatsby": "4.8.1",
     "gatsby-plugin-react-helmet": "5.9.0",
     "gatsby-plugin-react-svg": "3.1.0",

@@ -9,6 +9,7 @@
 
   @include respond(small) {
     max-width: $max-width-small;
+    background-color: transparent;
   }
 
   @include respond(medium) {
@@ -109,6 +110,7 @@
       justify-content: flex-end;
       position: static;
       height: auto;
+      background-color: transparent;
     }
 
     &--visible {

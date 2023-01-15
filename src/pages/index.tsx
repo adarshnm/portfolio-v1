@@ -9,12 +9,14 @@ import CONTACTS from '@/constants/contact.constants';
 import ContactCard from '@/components/ContactCard';
 import HeroLogo from '@/components/HeroLogo';
 import PROJECTS from '@/constants/projects.constants';
+import BackgroundEffects from '@/components/BackgroundEffects';
 
 export default function Home() {
   return (
-    <main>
+    <main className="main">
       <SEO />
       <Navbar />
+      <BackgroundEffects />
       <section className="hero container" id="hero">
         <div className="hero__image">
           <HeroLogo />

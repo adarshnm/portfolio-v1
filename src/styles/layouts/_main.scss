@@ -1,0 +1,17 @@
+.main {
+  position: relative;
+
+  &__background {
+    overflow: hidden;
+  }
+
+  &__blured-object {
+    background-color: #0e85f3;
+    display: block;
+    opacity: 0.22;
+    filter: blur(32.5px);
+    position: absolute;
+    top: 100%;
+    z-index: -2;
+  }
+}
